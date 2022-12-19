@@ -1,44 +1,117 @@
-import React, { useState, useEffect } from 'react';
-
-function App() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(
-        './persons.json',
-      );
-       const json = await res.json();
-       setData(json.persons);
-    };
-    fetchData();
-  }, [setData]);
+<>
+<h1>Oppgaver</h1>
+<div className='cardcontainer'>
+<div className='row'>
+<div className='col'>
 
 
 
- return (
+<div className="svg-pi-wrapper" style={{ width: size, height: size }}>
+
+
+
+<svg className="svg-pi" style={{ width: size, height: size }}>
+  <circle
+    className="svg-pi-track"
+    cx={center}
+    cy={center}
+    fill="transparent"
+    r={radius}
+    stroke={trackColor}
+    strokeWidth={trackWidth}
+  />
+
+
+
+  <circle
+    className={`svg-pi-indicator ${
+      spinnerMode ? "svg-pi-indicator--spinner" : ""
+    }`}
+    style={{ animationDuration: spinnerSpeed * 1000 }}
+    cx={center}
+    cy={center}
+    fill="transparent"
+    r={radius}
+    stroke={indicatorColor}
+    strokeWidth={indicatorWidth}
+    strokeDasharray={dashArray}
+    strokeDashoffset={dashOffset}
+    strokeLinecap={indicatorCap}
+  />
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="svg-pi-label-title ">Mine</p>
+{!hideLabel && (
+  <div 
+    className="svg-pi-label" 
+    style={{ color: labelColor }}
+  >
+     <span className="svg-pi-label__loading">
+      {label}
+    </span>
+  </div>
   
-  );
-}
+)}
+</div>
+</div>
+<div className='col'>
+<div className="svg-pi-wrapper" style={{ width: size, height: size }}>
+<svg className="svg-pi" style={{ width: size, height: size }}>
+<circle
+  className="svg-pi-track"
+  cx={centerEmpl}
+  cy={centerEmpl}
+  fill="transparent"
+  r={radiusEmpl }
+  stroke={trackColor}
+  strokeWidth={trackWidth}
+/>
+<circle
+  className={`svg-pi-indicator ${
+    spinnerMode ? "svg-pi-indicator--spinner" : ""
+  }`}
+  style={{ animationDuration: spinnerSpeed * 1000 }}
+  cx={centerEmpl}
+  cy={centerEmpl}
+  fill="transparent"
+  r={radiusEmpl}
+  stroke={indicatorColor}
+  strokeWidth={indicatorWidth}
+  strokeDasharray={dashArrayEmpl}
+  strokeDashoffset={dashOffsetEmpl}
+  strokeLinecap={indicatorCap}
+/>
+</svg>
+<p class="vg-pi-label-title">Ansatte</p>
+{!hideLabel && (
+<div 
+  className="svg-pi-label" 
+  style={{ color: labelColor }}
+>
+   <span className="svg-pi-label__loading">
+    {labelEmpl}
+  </span>
+</div>
+)}
+ </div>
+</div>
+    </div>
+    </div>
 
-export default App;
 
 
+</>
 
 
-
-
-{products.map(function (product) {
-  let { id, image_url, title, description, price, updated_at } = product;
-  return (w
-    <ProductItem
-      key={id}
-      updated_at={updated_at}
-      id={id}
-      image_url={image_url}
-      title={title}
-      description={description}
-      price={price}
-    />
-  );
-})}

@@ -31,10 +31,11 @@
 			"firstname": "Daniel",
 			"mobile": "5555555",
 			"lastname": "Dahlberg",
-			"image": "/files/image/97",
+			"image": "./assets/96.png",
 			"pid": 7525,
 			"birthdate": "",
-			"fullname": "Daniel Dahlberg"
+			"fullname": "Daniel Dahlberg",
+			"lastcall": "14 mnd"
 		}
 	}, {
 		"person": {
@@ -86,12 +87,14 @@
 				"description": ""
 			}],
 			"firstname": "Petter",
-			"mobile": "",
+			"mobile": "5555555",
 			"lastname": "Enholm",
-			"image": "/files/image/96",
+			"image": "./assets/97.png",
 			"pid": 5404,
 			"birthdate": "",
-			"fullname": "Petter Enholm"
+			"fullname": "Petter Enholm",
+			"lastcall": "14 mnd",
+			"kritiskeoppgaver":"2"
 		}
 	}, {
 		"person": {
@@ -124,10 +127,12 @@
 			}],
 			"firstname": "Morten",
 			"mobile": "",
+			"image": "./assets/1.png",
 			"lastname": "Krane",
 			"pid": 4951,
 			"birthdate": "",
-			"fullname": "Morten Krane"
+			"fullname": "Morten Krane",
+			"lastcall": "14 mnd"
 		}
 	}, {
 		"person": {
@@ -181,10 +186,12 @@
 			"firstname": "Jostein",
 			"mobile": "93400328",
 			"lastname": "Leira",
-			"image": "/files/image/1",
+			"image": "./assets/97.png",
 			"pid": 1,
 			"birthdate": "",
-			"fullname": "Jostein Leira"
+			"fullname": "Jostein Leira",
+			"lastcall": "14 mnd",
+			"kritiskeoppgaver":"2"
 		}
 	}]
 }

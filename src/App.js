@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import CardHolder from "./components/Card.js";
+import CardHolder from "./cardholder/CardHolderList";
+import Navbar from "./navbar/Navbar.js";
+import ProgressDonut from "./progressbar/ProgressDonut"
+
+import './App.css';
+
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -15,28 +21,54 @@ function App() {
 
   return (
     <>
-      <h1>ansatt</h1>
-      <CardHolder />
+<ProgressDonut/>
 
-      <h1>deler det visuelle</h1>
 
-      {data.map(({ person }) => (
-        <div classname="card w-100">
-          <div classname="card-body">
-            <h5 clasnames="card-title">{person.fullname}</h5>
-            <small class="text-muted">
-              {" "}
-              <small class="text-muted">daniel@snapper.com</small>
-            </small>
-            <p classname="card-text">
-              With supporting text below as a natural lead-in to additional
-              content.
-            </p>
-          </div>
-        </div>
-      ))}
-    </>
+<br></br>
+<br></br>
+
+<br></br>
+<br></br>
+
+<br></br>
+<br></br>
+
+<br></br>
+<br></br>
+
+<br></br>
+<br></br>
+
+<br></br>
+<br></br>
+
+<br></br>
+<br></br>
+
+<br></br>
+<br></br>
+    <Navbar />
+   
+
+
+     <h1 className="container">Ansatte</h1>
+     {data.map(({ person, pid }) => (
+      <CardHolder
+      key ={pid}
+      name={person.fullname} 
+      lastname={person.lastname}
+      mobile={person.mobile}
+      birthdate = {person.birthdate}
+      image ={person.image}
+      lastcall={person.lastcall}
+      kritiskeoppgaver={person.kritiskeoppgaver}
+      />  
+     ))}
+     </>
   );
 }
 
 export default App;
+
+
+
